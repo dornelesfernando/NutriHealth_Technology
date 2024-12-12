@@ -88,50 +88,55 @@ h1 {
 }
 
 .exercise-group {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); /* 5 cards por linha */
-        gap: 20px; /* Espaçamento entre os cards */
-        margin-top: 20px;
-        justify-items: center; /* Centraliza os cards */
-        padding-left: 20px;
-        padding-right: 0px;
-    }
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards por linha */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: 20px;
+    justify-items: center; /* Centraliza os cards */
+    padding: 0 50px;
+}
 
-    .exercise-card {
-        margin: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15);
-        padding: 30px; /* Espaçamento interno maior */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 400%; /* Faz o card se ajustar ao espaço da coluna */
-        max-width: 300px; /* Maior largura do card */
-        box-sizing: border-box;
-    }
+.exercise-card {
+    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15);
+    padding: 30px; /* Espaçamento interno maior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400%; /* Faz o card se ajustar ao espaço da coluna */
+    max-width: 300px; /* Maior largura do card */
+    box-sizing: border-box;
+}
 
-    .exercise-card img {
-        width: 100%; /* Ajusta à largura do card */
-        height: 180px; /* Altura proporcional */
-        margin-bottom: 15px;
-        border-radius: 10px;
-        object-fit: cover; /* Corta a imagem para preencher a área */
-    }
+.exercise-card:hover {
+    transform: translateY(-10px); /* Efeito de levitar */
+    transition: 0.3s; /* Animação suave */
+    z-index: 9999; /* Coloca o card sobre os outros */
+}
 
-    .exercise-card .content h3 {
-        font-size: 1.3rem; /* Título ligeiramente maior */
-        color: #003366;
-        margin-bottom: 10px;
-    }
+.exercise-card img {
+    width: 100%; /* Ajusta à largura do card */
+    height: 180px; /* Altura proporcional */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    object-fit: cover; /* Corta a imagem para preencher a área */
+}
 
-    .exercise-card .content p {
-        font-size: 1rem; /* Texto legível */
-        color: #555;
-    }
+.exercise-card .content h3 {
+    font-size: 1.3rem; /* Título ligeiramente maior */
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.exercise-card .content p {
+    font-size: 1rem; /* Texto legível */
+    color: #555;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
