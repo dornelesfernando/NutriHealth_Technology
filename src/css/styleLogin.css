@@ -13,41 +13,6 @@ body {
     background-position: center;
 }
 
-header {
-    background-color: #003366;
-    padding: 10px 0;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Para garantir que o menu fique acima do conteúdo */
-}
-
-header nav ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover,
-header nav ul li a.active {
-    color: #82b1ff; /* Azul claro para o item ativo */
-}
-
 /* Estilos do formulário de login */
 .login-container {
     background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */

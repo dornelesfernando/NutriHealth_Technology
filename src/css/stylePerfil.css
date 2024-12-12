@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e cores */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e3f2fd; /* Azul pastel claro */
+    color: #003366; /* Azul marinho */
+    line-height: 1.6;
+}
+
+/* Barra de navegação */
+header {
+    background-color: #003366; /* Azul marinho */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Fixa o menu no topo */
+    z-index: 1000; /* Garante que o menu fique sobreposto a outros elementos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 32px;
+    margin-left: 10px; /* Coloca o ícone à direita da palavra */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #82b1ff; /* Azul pastel mais claro */
+}
+
+nav ul li a.active {
+    color: #82b1ff; /* Cor azul quando estiver ativo */
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container do perfil */
+.perfil-container {
+    padding: 60px 10%;
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 90%;
+    margin-top: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para o título da página */
+h2, h3 {
+    text-align: center;
+    color: #003366;
+}
+
+/* Informações do perfil */
+.perfil-info {
+    width: 90%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo para os títulos dentro do perfil */
+.perfil-info strong {
+    font-weight: bold;
+    color: #003366;
+    display: inline-block;
+    min-width: 200px;
+}
+
+/* Ajuste para os valores do perfil */
+.perfil-info span {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Margem entre as seções */
+.perfil-info + h3 {
+    margin-top: 30px;
+}
+
+/* Botão Estilizado */
+.btn-atualizar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg, #00509e, #1E90FF);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeitos de Hover */
+.btn-atualizar:hover {
+    background: linear-gradient(90deg, #1E90FF, #00509e);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Efeitos de Clique */
+.btn-atualizar:active {
+    background: #00509e;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(0.98);
+}
