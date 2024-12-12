@@ -1,54 +1,3 @@
-create table conta(id int primary key auto_increment, nome varchar(250), email varchar(250), senha int(250));
-create table usuario_info(id_us int, peso int(3), altura float(3), idade int(3), constraint FK_idcontaus foreign key(id_us) references conta(id));
-create table adicionais(id_add int, artrite int(1), artrose int(1), osteoporose int(1), constipacao int(1), enjoo int(1), vomitos int(1), tonturas int(1), constraint FK_idcontaadd foreign key(id_add) references conta(id));
-
-insert into conta(nome, email, senha) values ('layanne johanson', 'layannejohanson2@gmail.com', 123);
-insert into usuario_info(peso, altura, idade) values (60, 1.66, 16);
-insert into adicionais(artrite, artrose, osteoporose, constipacao, enjoo, vomitos, tonturas) values (0,0,0,0,1,0,1);
-
-
-
-
-
-
-
-//
-
-create table login(id int primary key auto_increment not null, 
-nome varchar(250) not null, 
-sobrenome varchar(250) not null, 
-email varchar(250) not null, 
-senha varchar(250) not null);
-
-create table adicionais(id int primary key auto_increment,
-id_loogin int, 
-artrite int(1),
-artrose int(1), 
-osteoporose int(1), 
-constipacao int(1), 
-enjoo int(1), 
-vomitos int(1), 
-tonturas int(1), 
-foreign key(id_loogin) references login(id));
-
-create table usuario_info(id int primary key auto_increment,
-id_login int, 
-peso int(3) not null, 
-altura float(3) not null,
-datanasc date not null, 
-foreign key(id_login) references login(id));
-
-insert into login(nome, sobrenome, email, senha) 
-values ('layanne', 'johanson', 'layannejohanson2@gmail.com', 123);
-
-
-insert into usuario_info(id_login, peso, altura, datanasc) 
-values (60, 1.66, '2008/04/23');
-
-insert into adicionais(artrite, artrose, osteoporose, constipacao, enjoo, vomitos, tonturas) 
-values (0,0,0,0,1,0,1);
-
-//
 CREATE DATABASE siteppi1;
 
 USE siteppi1;
@@ -70,6 +19,3 @@ CREATE TABLE login(
     altura float(3) NOT NULL,
     datanasc date NOT NULL
 );
-
-INSERT INTO login(nome, sobrenome, email, senha, artrite, artrose, osteoporose, constipacao, enjoo, vomitos, tonturas, peso, altura, datanasc) 
-values ('layanne', 'johanson', 'layannejohanson2@gmail.com', 123, 0, 0, 0, 0, 1, 0, 1, 60, 1.66,'2008/04/23');
