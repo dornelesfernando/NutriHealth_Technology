@@ -1,0 +1,190 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e cores */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e3f2fd; /* Azul pastel claro */
+    color: #003366; /* Azul marinho */
+}
+
+/* Barra de navegação */
+header {
+    background-color: #003366; /* Azul marinho */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Fixa o menu no topo */
+    z-index: 1000; /* Garante que o menu fique sobreposto a outros elementos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 32px;
+    margin-left: 10px; /* Coloca o ícone à direita da palavra */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #82b1ff; /* Azul pastel mais claro */
+}
+
+nav ul li a.active {
+    color: #82b1ff; /* Cor azul quando estiver ativo */
+}
+
+/* Seção de boas-vindas */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa a tela inteira */
+    background-color: #e3f2fd;
+    text-align: center;
+}
+
+.text-container h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: #003366;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.text-container p {
+    font-size: 24px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 90%;
+    height: auto;
+}
+
+/* Benefícios */
+.benefits-wrapper {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 15px 10px 15px;
+    margin: 20px auto 40px auto;
+    max-width: 1200px;
+}
+
+.benefits-section {
+    padding: 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003366; /* Azul escuro */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.benefit-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-item h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin: 20px 0;
+}
+
+.benefit-item p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.benefit-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1.8px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

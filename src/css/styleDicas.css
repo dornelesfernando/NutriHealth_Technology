@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e cores */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e3f2fd; /* Azul pastel claro */
+    color: #003366; /* Azul marinho */
+    line-height: 1.6;
+}
+
+/* Barra de navegação */
+header {
+    background-color: #003366; /* Azul marinho */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+    font-weight: 700;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #82b1ff;
+}
+
+nav ul li a.active {
+    color: #82b1ff;
+}
+
+/* Seção Dicas */
+.dicas-section {
+    padding: 60px 10%;
+    background-color: #f0f8ff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.dica-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dica-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dica-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dica-item h4 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.dica-item p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.dica-item .highlight {
+    font-weight: bold;
+    color: #82b1ff;
+}
+
+/* Lista numerada das dicas */
+.dicas-list {
+    padding: 40px 10%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dicas-list h3 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.dicas-list ol {
+    padding-left: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.dicas-list ol li {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.dicas-list ol li .highlight {
+    font-weight: bold;
+    color: #82b1ff;
+}
+
+/* Rodapé */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1.8px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dicas-section {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .dica-item h4 {
+        font-size: 1.6rem;
+    }
+
+    .dica-item p {
+        font-size: 1rem;
+    }
+
+    .dicas-list h3 {
+        font-size: 2rem;
+    }
+}
