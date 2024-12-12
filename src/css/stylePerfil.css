@@ -5,10 +5,12 @@
     box-sizing: border-box;
 }
 
+/* Fonte e cores */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f7f9fc;
-    color: #003366;
+    background-color: #e3f2fd; /* Azul pastel claro */
+    color: #003366; /* Azul marinho */
+    line-height: 1.6;
 }
 
 /* Barra de navegação */
@@ -63,48 +65,64 @@ nav ul li a.active {
     color: #82b1ff; /* Cor azul quando estiver ativo */
 }
 
-/* Estrutura do conteúdo */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #003366;
+/* Container do perfil */
+.perfil-container {
+    padding: 60px 10%;
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 90%;
+    margin-top: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para o título da página */
+h2, h3 {
     text-align: center;
-    margin-bottom: 40px;
-}
-
-.section {
-    margin-bottom: 60px;
-}
-
-.section h2 {
-    font-size: 2rem;
     color: #003366;
-    margin-bottom: 20px;
 }
 
-.content {
-    background: white;
+/* Informações do perfil */
+.perfil-info {
+    width: 90%;
+    margin: 20px 0;
     padding: 20px;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    color: #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
     line-height: 1.6;
 }
 
-.content ul {
-    list-style: disc;
-    padding-left: 20px;
+/* Estilo para os títulos dentro do perfil */
+.perfil-info strong {
+    font-weight: bold;
+    color: #003366;
+    display: inline-block;
+    min-width: 200px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .content {
-        font-size: 0.9rem;
-    }
+/* Ajuste para os valores do perfil */
+.perfil-info span {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Margem entre as seções */
+.perfil-info + h3 {
+    margin-top: 30px;
 }

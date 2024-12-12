@@ -24,7 +24,7 @@
         } else {
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
-            header('Location: ppi01.php');
+            header('Location: home.php');
         }
     } else {
         // Não acessou

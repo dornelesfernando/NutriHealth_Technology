@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     VALUES ('$nome', '$sobrenome', '$email', '$senha', '$altura', '$peso', '$datanasc', '$artrite', '$artrose', '$osteoporose', '$constipacao', '$enjoo', '$vomitos', '$tonturas')");
 
     if ($result) {
-        header("Location: inicio.php");
+        header("Location: home.php");
         exit();
     } else {
         //echo "Erro ao cadastrar: " . mysqli_error($conexao);
@@ -36,7 +36,8 @@ if (isset($_POST['submit'])) {
     <title>Cadastro</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styleCadastro.css">
+    
+    <link rel="stylesheet" href="./src/css/styleCadastro.css">
 </head>
 <body>
     <!-- Formulário de cadastro -->
@@ -181,7 +182,7 @@ if (isset($_POST['submit'])) {
     </form>
 
     <div class="form-footer">
-        <p>Já tem uma conta? <a href="ppi01.php">Faça login</a></p>
+        <p>Já tem uma conta? <a href="login.php">Faça login</a></p>
     </div>
 </body>
 </html>

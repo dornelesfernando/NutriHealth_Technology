@@ -10,35 +10,6 @@ body {
     align-items: center;
 }
 
-header {
-    background-color: #003366;
-    padding: 10px 0;
-    width: 100%;
-}
-
-header nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover,
-header nav ul li a.active {
-    color: #00509e;
-}
-
 /* Estilos do formulário de cadastro */
 .cadastro-container {
     background-color: rgba(255, 255, 255, 0.95); /* Fundo semi-transparente */
